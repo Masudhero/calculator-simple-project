@@ -1,0 +1,31 @@
+.card {
+    width: 285px;
+    height: 440px;
+    margin: auto;
+    border: 50px solid black;
+    border-radius: 10px;
+    padding: 13px;
+  }
+  .in {
+    width: 145px;
+    background: #d2cfcf;
+  }
+  input {
+    width: 20px;
+    background-color: #998d8d;
+    color: black;
+    border: 2px solid silver;
+    border-radius: 5px;
+    padding: 27px;
+    margin: 5px;
+    font-size: 18px;
+    text-align: center;
+  }
+  input:hover{
+    background-color: rgb(172, 172, 172);
+  }
+  h1{
+    text-align: center;
+    color: rgb(219, 121, 0);
+    font-size: 36px;
+  }

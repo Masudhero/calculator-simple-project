@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- this is calculator start  -->
+    <h1>Calculator</h1>
+    <div class="card">
+        <div class="card-header">
+            <input class="in" type="text" id="result" maxlength="20">
+            <input type="button" class="btn cc btn-style" onclick="button('/')" value="/">
+        </div>
+        <div class="col-body">
+            <input type="button" class="btn" value="C" onclick="clr()">
+            <input type="button" class="btn" onclick="button('9')" value="9">
+            <input type="button" class="btn" onclick="button('8')" value="8">
+            <input type="button" class="btn" onclick="button('*')" value="*">
+        </div>
+        <div class="col2">
+            <input type="button" class="btn" onclick="button('7')" value="7">
+            <input type="button" class="btn" onclick="button('6')" value="6">
+            <input type="button" class="btn" onclick="button('5')" value="5">
+            <input type="button" class="btn btn-style" onclick="button('-')" value="-">
+        </div>
+        <div class="col3">
+            <input type="button" class="btn" onclick="button('4')" value="4">
+            <input type="button" class="btn" onclick="button('3')" value="3">
+            <input type="button" class="btn" onclick="button('2')" value="2">
+            <input type="button" class="btn btn-style" onclick="button('+')" value="+">
+        </div>
+        <div class="col4">
+            <input type="button" class="btn" onclick="button('1')" value="1">
+            <input type="button" class="btn" onclick="button('0')" value="0">
+            <input type="button" class="btn" onclick="button('.')" value=".">
+            <input type="button" class="btn" onclick="calculation()" style="background-color: gray;" value="=">
+        </div>
+    </div>
+    <!-- script tag start  -->
+
+    <script>
+        function button(number){
+            var result =document.getElementById('result');
+            result.value+=number;
+        }
+        function calculation(){
+            var calculation =document.getElementById('result').value;
+            var evall =eval(calculation);
+            document.getElementById('result').value=evall;
+        }
+
+        function clr(){
+          document.getElementById('result').value="";
+        }
+    </script>
+</body>
+</html>
